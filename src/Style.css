@@ -1,0 +1,48 @@
+.headingStyle{
+    color:white;
+    font-size: 2.9rem;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-70%, -70%);
+   
+  }
+  .btns{
+    width: 170px;
+    height: 40px;
+    background-color: rgb(115, 191, 0);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 58%;
+    left: 45%;
+    transform: translate(-70%, -70%);
+    border: none;
+    border-radius: 20px;
+   
+   
+  }
+  .btns:hover{
+    color: white;
+    background-color: black;
+}
+.d-flex {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-color: #ada7a6;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+}
+
+
+.d-flex:hover {
+  border-color: #ada7a6; /* Change this to your desired color */
+  box-shadow: 0 0 10px rgba(168, 166, 165, 0.5); /* Change this to your desired color and shadow */
+}
+.imgs:hover{
+  transform: scale(1.2);
+}
+
+

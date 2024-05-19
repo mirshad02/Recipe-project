@@ -3,12 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Detail from './Detail';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import Meals from './Meals';
+import Allitems from './Allitems';
+import Country from './Country';
+import Countryfilter from './Countryfilter';
+import Category from './Category';
+import Navbars from './Navbars';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+  <Routes>
+  <Route path='/' element={<Navbars/>}> 
+  <Route index element={<Category/>}/> 
+ <Route path='/detail/:catName' element={<Detail/>}></Route>
+ <Route path='/meals/:meals' element={<Meals/>}></Route>
+ <Route path='/allitems' element={<Allitems/>}></Route>
+ <Route path='/country' element={<Country/>}></Route>
+ <Route path='/cnf/:item' element={<Countryfilter/>}></Route>
+ </Route>
+  </Routes>
+  </BrowserRouter>
+  </React.StrictMode> 
 );
 
 // If you want to start measuring performance in your app, pass a function

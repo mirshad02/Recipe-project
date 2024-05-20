@@ -12,6 +12,9 @@ import Country from './Country';
 import Countryfilter from './Countryfilter';
 import Category from './Category';
 import Navbars from './Navbars';
+import Recipe from './Recipe.jsx';
+import Search from './Search'
+import SearchResult from './SearchResult';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,11 +24,14 @@ root.render(
   <Routes>
   <Route path='/' element={<Navbars/>}> 
   <Route index element={<Category/>}/> 
+  <Route path='recipe' element={<Recipe/>}/> 
  <Route path='/detail/:catName' element={<Detail/>}></Route>
  <Route path='/meals/:meals' element={<Meals/>}></Route>
  <Route path='/allitems' element={<Allitems/>}></Route>
  <Route path='/country' element={<Country/>}></Route>
  <Route path='/cnf/:item' element={<Countryfilter/>}></Route>
+ <Route path='/search' element={<Search/>}></Route>
+ <Route path='/searchresult' element={<SearchResult/>}></Route>
  </Route>
   </Routes>
   </BrowserRouter>
